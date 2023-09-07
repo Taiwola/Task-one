@@ -1,0 +1,15 @@
+{
+  "name": "task-one",
+  "version": "1.0.0",
+  "description": "HNG task one",
+  "main": "index.js",
+  "scripts": {
+      "start": "node index.js",
+      "dev": "nodemon index.js"
+  },
+  "author": "seun olanitori",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
