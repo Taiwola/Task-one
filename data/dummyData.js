@@ -2,7 +2,15 @@
 const currentDate = new Date();
 
 // Format the date in "YYYY-MM-DDTHH:mm:ssZ" format
-const formattedDate = currentDate.toISOString();
+const year = currentDate.getUTCFullYear();
+const month = String(currentDate.getUTCMonth() + 1).padStart(2, '0'); // Month is zero-based
+const day = String(currentDate.getUTCDate()).padStart(2, '0');
+const hours = String(currentDate.getUTCHours()).padStart(2, '0');
+const minutes = String(currentDate.getUTCMinutes()).padStart(2, '0');
+const seconds = String(currentDate.getUTCSeconds()).padStart(2, '0');
+
+// Create the formatted date string
+const formattedDate = `${year}-${month}-${day}T${hours}:${minutes}:${seconds}Z`;
 
 // Get the current day of the week as an integer (0 for Sunday, 1 for Monday, and so on)
 const dayOfWeek = currentDate.getDay();
